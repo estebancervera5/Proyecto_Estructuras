@@ -1,4 +1,4 @@
-
+#Busqueda binaria
 albumes = [
         {"nombre": "Album A", "artista": "Artista 1", "precio": 10.0},
         {"nombre": "Album B", "artista": "Artista 2", "precio": 15.0},

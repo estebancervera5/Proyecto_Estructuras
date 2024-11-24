@@ -1,3 +1,4 @@
+#arbol.py
 class Nodo:
     def __init__(self, nombre, artista, precio):
         self.album = {"nombre": nombre, "artista": artista, "precio": precio}

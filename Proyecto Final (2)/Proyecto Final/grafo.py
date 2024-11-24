@@ -63,6 +63,7 @@ class Grafo:
 
         print(f"\nCosto total de las rutas óptimas: {peso_total}")
 
+
 def menu_kruskal():
     print("\n--- Gestión de Rutas de Entrega ---")
     while True:
@@ -97,14 +98,19 @@ def menu_kruskal():
                     grafo.agregar_ruta(origen, destino, costo)
                     print(f"Ruta de {origen} a {destino} con costo {costo} agregada.")
             except ValueError:
-                print("Por favor, introduce valores válidos.")
+                print("Por favor, introduce valores válidos. Asegúrate de usar números enteros.")
 
         elif opcion == '2':
-            grafo.kruskal()
+            try:
+                grafo.kruskal()
+            except Exception as e:
+                print(f"Hubo un error al calcular las rutas óptimas: {e}")
 
         elif opcion == '3':
             print("Saliendo del gestor de rutas...")
             break
 
         else:
-            print("Opción no válida.")
+            print("Opción no válida. Por favor, selecciona una opción del menú.")
+
+
